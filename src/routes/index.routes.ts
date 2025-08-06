@@ -1,9 +1,8 @@
 import { Router } from "express";
+import homeRouter from "./home.routes";
 
 const router = Router();
 
-router.get("/", (req, res) => {
-  res.send("Servidor corriendo");
-});
+router.use("/", homeRouter);
 
 export default router;
