@@ -1,3 +1,5 @@
+import { AppError } from "../types/AppError";
+
 export const getHomeController = async (): Promise<string> => {
-  return "estoy en el controller de home";
+  throw new AppError("Mensaje claro", 400);
 };
